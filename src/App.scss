@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Megrim&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,400i,700&display=swap');
+
+// TYPEFACE
+$heading-font: 'Megrim', serif;
+$content-font: 'DM Sans', Helvetica, sans-serif;
+$monotype-font: Monaco, 'Lucida Console', 'Courier New', monospace;
+
+// PRIMARY COLOR, DARK TO LIGHT
+$primary0: hsl(304, 81%, 21%);
+$primary25: hsl(316, 100%, 35%);
+$primary50: hsl(343, 100%, 44%);
+$primary75: hsl(343, 90%, 52%);
+$primary100: hsl(48, 100%, 68%);
+
+// ACCENT COLOR, DARK TO LIGHT
+$accent0: hsl(226, 94%, 3%);
+$accent25: hsl(230, 100%, 24%);
+$accent50: hsl(205, 100%, 47%);
+$accent75: hsl(188, 100%, 67%);
+$accent100: hsl(195, 100%, 95%);
+
+// NEUTRAL (GREY) COLOR, DARK TO LIGHT
+$neutral0: hsl(0, 0%, 15%);
+$neutral25: hsl(0, 0%, 25%);
+$neutral50: hsl(0, 0%, 50%);
+$neutral75: hsl(0, 0%, 75%);
+$neutral100: hsl(0, 0%, 95%);
+
+/* ---------------------------------------------- 
+= = = = = = = = = = GENERAL = = = = = = = = = =
+---------------------------------------------- */
+* {
+  margin: 0;
+}
+
+html {
+  background-color: $accent0;
+  color: $accent100;
+  font: 12pt/1 $content-font;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2rem 0 0.5rem 0;
+  font-family: $heading-font;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 0.25rem 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+figcaption {
+  margin: 0.25rem 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-center {
+  display: block;
+  text-align: center;
+}
+
+.text-right {
+  display: block;
+  text-align: right;
+}
+
+/* ---------------------------------------------- 
+= = = = = = = = = = BLOCKQUOTE = = = = = = = = =
+---------------------------------------------- */
+blockquote {
+  margin: 2rem 2rem 1.5rem;
+}
+
+blockquote p {
+  margin: 0;
+  font-family: $content-font;
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-shadow: $accent75 1px 0px 8px, $accent50 -2px -2px 8px,
+    $accent25 -2px -2px 8px, $accent50 2px 2px 8px, $accent25 2px 2px 8px;
+}
+
+blockquote footer {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  text-align: right;
+  text-shadow: $primary100 1px 0px 8px, $primary75 -2px -2px 8px,
+    $primary50 -2px -2px 8px, $primary75 2px 2px 8px, $primary50 2px 2px 8px;
+}
+
+/* ---------------------------------------------- 
+= = = = = = = = = FLEX CLASSES = = = = = = = = = 
+---------------------------------------------- */
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.center-vh-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.center-vh-item {
+  width: 90%;
+  max-width: 500px;
+}
+
+/* ---------------------------------------------- 
+= = = = = = = = = SITE CLASSES = = = = = = = = = 
+---------------------------------------------- */
+.led-title {
+  margin-top: -32px;
+  margin-bottom: 0px;
+  font-size: 2.25rem;
+  color: $primary100;
+  text-shadow: $primary100 1px 0px 8px, $primary75 -2px -2px 8px,
+    $primary50 -2px -2px 8px, $primary75 2px 2px 8px, $primary50 2px 2px 8px;
+}
+
+.quote-sign {
+  border: 3px solid $primary100;
+  border-radius: 4px;
+  box-shadow: inset 0 0 12px $primary100, inset 4px 0 12px $primary75,
+    inset -4px 0 12px $primary50, inset 4px 0 12px $primary75,
+    inset -4px 0 12px $primary50, 0 0 12px $primary100, -4px 0 12px $primary75,
+    4px 0 12px $primary50;
+}
+
+.call-to-action {
+  margin-top: 48px;
+  margin-bottom: -32px;
+
+  a,
+  button {
+    font-family: $heading-font;
+    color: $accent75;
+    text-shadow: $accent50 1px 0px 8px, $accent25 -2px -2px 8px,
+      $accent0 -2px -2px 8px, $accent25 2px 2px 8px, $accent0 2px 2px 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition-duration: 0.1s;
+  }
+
+  a:hover,
+  button:hover {
+    color: $accent100;
+    text-shadow: $accent75 1px 0px 8px, $accent50 -2px -2px 8px,
+      $accent25 -2px -2px 8px, $accent50 2px 2px 8px, $accent25 2px 2px 8px;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 270px) {
+  blockquote {
+    margin: 1rem 1rem;
+  }
+
+  blockquote p {
+    font-size: 0.75rem;
+  }
+
+  .led-title {
+    margin-top: 0px;
+    font-size: 1.5rem;
+  }
+
+  .call-to-action {
+    margin-top: 24px;
+    margin-bottom: -48px;
+  }
+
+  .flex-justify-between {
+    justify-content: center;
+  }
+}
